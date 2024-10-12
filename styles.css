@@ -38,15 +38,29 @@ body {
       }
     } 
 
-
+/* Logo Styling */
 .logo {
+  float: left;
+  margin-left: 28px;
+  height: 60px; /* Adjust based on navbar height */
+}
+
+.logo img {
+  height: 70%; /* The logo will take the full height of the .logo div */
+  width: auto; /* Maintain the aspect ratio of the logo */
+}
+
+
+/* .logo {
   float: left;
   margin-left: 28px;
   font-size: 1.5em;
   height: 60px;
   letter-spacing: 1px;
   text-transform: uppercase;
-} @media(max-width: 768px) {
+}  */
+
+@media(max-width: 768px) {
     .logo {
 /*       margin-left: 5px; */
     }
@@ -426,142 +440,65 @@ footer {
 }
 
 
-/* Universe Teams Card  */
-
-/* Card Container */
-.card-container {
-    position: relative;
-    width: 12rem;  /* Adjust the width as needed */
-    height: 16rem; /* Adjust the height as needed */
-    background-color: #3d3c3d;
-    border-radius: 1rem;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Card Image */
-.card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Card Content (Hidden by default, appears on hover) */
-.card-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(50, 49, 50, 0.8); /* Grey overlay */
-    color: white;
-    border-radius: 1rem;
-    opacity: 0; /* Initially hidden */
-    z-index: 1;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Card Blur Effect */
-.card-blur {
-    position: absolute;
-    width: 14rem; /* Slightly larger than card width */
-    height: 12rem; /* Blur effect size */
-    background-color: white;
-    filter: blur(50px);
-    left: -50%;
-    top: -50%;
-    z-index: 0; /* Behind the content */
-}
-
-/* Hover Effect: Show content, darken image */
-.card-container:hover .card-content {
-    opacity: 1; /* Show the name and position */
-}
-
-.card-container:hover .card-image {
-    filter: brightness(50%); /* Darken the image */
-}
-
-
-.card-content h5 {
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-.card-content p {
-    margin: 0;
-    font-size: 1rem;
-    color: #ccc;
-}
-
 
 
 /*------------------------------- Team Section Styling ----------------------*/
-.team-section {
-  margin-top: 5%;
-  background-color: #f9f9f9; /* Light background for the team section */
-  padding: 40px 0; /* Add padding */
+/* Card Styling with Background Color */
+.card.member {
+  background-color: #ffffff; /* Background color for the card */
+  border-radius: 8px;        /* Rounded corners */
+  border: 1px solid #ddd;    /* Light border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.member {
-  position: relative; /* Allows positioning of the arrow */
-  margin-bottom: 30px; /* Space between cards */
+.card.member:hover {
+  transform: translateY(-5px); /* Hover effect: raise the card slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-.card {
-  height: 400px; /* Fixed height for all cards */
-  border-radius: 10px; /* Slightly rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+/* Image Styling for Full Visibility and Zoom-Out Effect */
+.card.member img {
+  width: 100%;                   /* Full width of the card */
+  height: 300px;                 /* Set a specific height to control size */
+  object-fit: contain;           /* Ensure the image is fully visible (zoomed out) */
+  border-top-left-radius: 8px;   /* Rounded corners for the top of the image */
+  border-top-right-radius: 8px;
+  display: block;
 }
 
-.card img {
-  width: 100%; /* Make image fill the card width */
-  height: 250px; /* Fixed height for images */
-  object-fit: contain; /* Ensure the entire image fits without cropping */
-  border-top-left-radius: 10px; /* Match the card's top corners */
-  border-top-right-radius: 10px; /* Match the card's top corners */
+.card-body {
+  padding: 15px;
+  text-align: center;
+  background-color: #f4f4f4; /* Background color for card content */
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
 }
 
 .arrow {
-  position: absolute;
-  right: 1rem; /* Position from the right */
-  bottom: 1rem; /* Position from the bottom */
-  width: 40px; /* Width of the arrow */
-  height: 40px; /* Height of the arrow */
-  background-color: #fff; /* White background for the arrow */
-  border-radius: 50%; /* Circular shape */
-  display: flex; /* Center the arrow icon */
-  justify-content: center; /* Centering */
-  align-items: center; /* Centering */
-  transition: background-color 0.3s; /* Smooth hover effect */
-  border: 2px solid grey; /* Border for the arrow */
-}
-
-.arrow:after {
-  content: ''; /* Create the arrow with a pseudo-element */
-  width: 12px; /* Width of the arrow */
-  height: 12px; /* Height of the arrow */
-  border: solid grey; /* Arrow color */
-  border-width: 2px 2px 0 0; /* Adjust border width to create a right-pointing arrow */
-  transform: rotate(45deg); /* Rotate the arrow */
-  margin-left: 3px; /* Space between arrow and border */
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .arrow:hover {
-  background-color: #f0f0f0; /* Slightly darker grey on hover */
+  background-color: #0056b3;
 }
+
+  
 
 
 
@@ -732,7 +669,7 @@ border-bottom: 1px solid #373636;
   margin-top: 20px;
 }
 .single-cta i {
-color: #f2ebe8;
+color: #ffd700;
 font-size: 30px;
 float: left;
 margin-top: 10px;
@@ -819,7 +756,7 @@ left: 0;
 bottom: -15px;
 height: 2px;
 width: 50px;
-background: #efefee;
+background: #ffd700;
 }
 .footer-widget ul li {
 display: inline-block;
@@ -828,7 +765,7 @@ width: 50%;
 margin-bottom: 12px;
 }
 .footer-widget ul li a:hover{
-color: #d1d0cf;
+color: #ffd700;
 }
 .footer-widget ul li a {
 color: #878787;
@@ -838,26 +775,8 @@ text-transform: capitalize;
 position: relative;
 overflow: hidden;
 }
-.subscribe-form input {
-width: 100%;
-padding: 14px 28px;
-background: #2E2E2E;
-border: 1px solid #2E2E2E;
-color: #fff;
-}
-.subscribe-form button {
-  position: absolute;
-  right: 0;
-  background: #e8e5e4;
-  padding: 13px 20px;
-  border: 1px solid #dfd7d4;
-  top: 0;
-}
-.subscribe-form button i {
-color: #fff;
-font-size: 22px;
-transform: rotate(-6deg);
-}
+
+
 .copyright-area{
 background: #202020;
 padding: 25px 0;
@@ -868,14 +787,14 @@ font-size: 14px;
 color: #878787;
 }
 .copyright-text p a{
-color: #e7e6e6;
+color: #ffd700;
 }
 .footer-menu li {
 display: inline-block;
 margin-left: 20px;
 }
 .footer-menu li:hover a{
-color: #bcbaba;
+color: #ffd700;
 }
 .footer-menu li a {
 font-size: 14px;
