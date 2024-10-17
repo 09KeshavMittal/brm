@@ -6,6 +6,8 @@
     <title>Practice Areas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="practices.css">
+    <link rel="stylesheet" href="./layout/navbar.css">
+    <link rel="stylesheet" href="./layout/footer.css">
     <script src="scripts.js"></script>
     <script >
         $(document).ready(function() {
@@ -49,30 +51,18 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<nav id="navbar" class="">
-  <div class="nav-wrapper">
-    <!-- Navbar Logo -->
-    <div class="logo">
-      <!-- Logo Placeholder for Inlustration -->
-      <a href=""> <img src="./data/logo.jpg" alt="" class="" ></a>
-      <strong>BRM LAW</strong>
-    </div>
-    
-    <!-- Navbar Links -->
-    <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#About">About Us</a></li>
-      <li><a href="#Team">Team</a></li>
-      <li><a href="practices.html">Practices</a></li>
-      <li><a href="./contact.html">Contact Us</a></li>
-    </ul>
-  </div>
+    <!-- ---------------------------------------Navbar ------------------------------------>
+    <nav>
+        <div id="navbar">
+            <script>
+             fetch("./layout/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                });
+            </script>
+        </div>
 </nav>
-    </header>
-
 
 
 
@@ -172,7 +162,19 @@
     </section>
 
     <!-- Footer -->
+    <footer>
+        <div id="footer">
+            <script>
+             fetch('./layout/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                });
+            </script>
+            </div>
     
+    </footer>
+
     <!------------------- Footer -->
     
 </body>

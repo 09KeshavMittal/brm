@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Brmlaw.in </title>
+    <title> Brm law.in </title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="./layout/footer.css">
     <!-- Go to Top -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -20,43 +20,19 @@
 
 
     <!-- ---------------------------------------Navbar ------------------------------------>
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<nav id="navbar" class="">
-  <div class="nav-wrapper">
-    <!-- Navbar Logo -->
-    <div class="logo">
-      <!-- Logo Placeholder for Inlustration -->
-      <a href=""> <img src="./data/logo.jpg" alt="" class="" ></a>
-      <strong>BRM LAW</strong>
-    </div>
-    
-    <!-- Navbar Links -->
-    <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#Team">Team</a></li>
-      <li><a href="practices.html">Practices</a></li>
-      <li><a href="./contact.html">Contact Us</a></li>
-    </ul>
-  </div>
+    <nav>
+        <div id="navbar">
+            <script>
+             fetch("./layout/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                });
+            </script>
+        </div>
 </nav>
 
 
-<!-- Menu Icon -->
-<div class="menuIcon">
-  <span class="icon icon-bars"></span>
-  <span class="icon icon-bars overlay"></span>
-</div>
-
-
-<div class="overlay-menu">
-  <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="practices.html"></a>Practices</li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
 
 
 
@@ -83,10 +59,7 @@
 
 
 
-
-
-
-<!----------------------------------------------- disclaimer -->
+<!----------------------------------------------- disclaimer ----------------------------------->
 
     <!-- Disclaimer Modal -->
     <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
@@ -208,7 +181,7 @@
             <div class="col-md-6">
                 <img src="https://media.istockphoto.com/id/1485724241/photo/law-school-concept.jpg?s=612x612&w=0&k=20&c=Lvbkgih5KqSWWlBRcTpRIL8gGxCjxXN95_LDmBxwsQI=" alt="About Us Image" class="img-fluid">
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6">
                 <h2>About BRM LAW</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit natus dolorem necessitatibus repellat earum magnam nesciunt dolor quo ullam deserunt, tempora laborum blanditiis quidem repudiandae, minima corrupti ratione expedita corporis cupiditate voluptatum qui! Obcaecati ex minus nemo ipsam accusamus, possimus necessitatibus perspiciatis atque nobis nostrum inventore distinctio, veniam doloribus assumenda in architecto, beatae sequi alias commodi maiores dolorem quia quam quo. Unde cumque ab cum inventore consequuntur, exercitationem tenetur beatae fugiat labore illum placeat quibusdam temporibus sequi nesciunt laudantium esse commodi dicta assumenda reiciendis impedit! In voluptate, neque optio tempore quod, maiores reprehenderit aliquam  illum aspernatur dolorem error dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum, veritatis eius aliquid quis doloremque recusandae? Iusto neque reprehenderit modi repellat veritatis cum? Vel, repellendus labore cumque sint enim deleniti? Necessitatibus cumque quo nihil maiores molestias deserunt esse eaque cum.We are a leading law firm offering top-tier legal services. Our experienced team specializes in corporate, civil, and criminal law.</p>
             </div>
@@ -217,15 +190,15 @@
 
     
 <!-- Teams Section UI 2 -->
-<section id="team" class="team-section container my-5">
+<!-- <section id="team" class="team-section container my-5">
 
     <h2 class="text-center ">Meet Our Team</h2>  
     <div class="row justify-content-center my-5">
-        <div class="col-md-4 mb-4"> <!-- Added mb-4 for bottom margin -->
+        <div class="col-md-4 mb-4"> 
             <div class="card member">
                 <img src="data/aneesh_mittal.png" class="card-img-top" alt="Team Member 1">
                 <div class="card-body">
-                    <h5 class="card-title">Aneesh Mittal</h5>
+                    <a href="people/aneesh_mittal.html"><h5 class="card-title">Aneesh Mittal</h5></a>
                     <p class="card-text">Founder</p>
                     <a href="profile1.html" class="arrow"></a> 
                 </div>
@@ -235,7 +208,7 @@
             <div class="card member">
                 <img src="./data/rakesh_singh.jpeg" class="card-img-top" alt="Team Member 2">
                 <div class="card-body ">
-                    <h5 class="card-title">Shri Rakesh Kumar</h5>
+                    <h5 class="card-title"><a href="./people/rakesh_singh.html">Shri Rakesh Kumar</a></h5>
                     <p class="card-text">Strategic Advisor</p>
                     <a href="profile2.html" class="arrow"></a> 
                 </div>
@@ -245,7 +218,7 @@
             <div class="card member">
                 <img src="data/komal_mittal.png" class="card-img-top" alt="Team Member 3">
                 <div class="card-body">
-                    <h5 class="card-title">Komal Mittal</h5>
+                    <h5 class="card-title"><a href="./people/komal_mittal.html">Komal Mittal</a></h5>
                     <p class="card-text">Associate</p>
                     <a href="profile3.html" class="arrow"></a> 
                 </div>
@@ -253,7 +226,7 @@
         </div>
         
     </div>
-</section>
+</section> -->
 
 
 <!------------------------------ Practice Areas --------------------------------------->
@@ -310,103 +283,20 @@
 
 
 
-    <!------------------- Footer -->
-    <footer class="footer-section">
-        <div class="container">
-            
-            <div class="footer-content pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="./data/logo.jpg" class="img-fluid" alt="logo"></a>
-                            </div>
-                            <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                elit,Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Useful Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Practices</a></li>
-                                <li><a href="#">Carrers</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Contact us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30 ">
-                        <div class="single-cta">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="cta-text">
-                                <h4>Find us</h4>
-                                <span>B16 sagar Appartments, Tilak Marg</span>
-                            </div>
-                        </div>
-                        
-                        <div class="single-cta">
-                            <i class="fas fa-phone"></i>
-                            <div class="cta-text">
-                                <h4>Call us</h4>
-                                <span>9876543xxx</span>
-                            </div>
-                        </div>
-
-                        <div class="single-cta">
-                            <i class="far fa-envelope-open"></i>
-                            <div class="cta-text">
-                                <h4>Mail us</h4>
-                                <span>mail@info.com</span>
-                            </div>
-                        </div>
-                        <!-- <div class="footer-social-icon">
-                            <span>Follow us</span>
-                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                        </div> -->
-                    </div>
-
-                    
-                            
-                </div>
+    
+    <!------------------- Footer ------------------------------------>
+    <footer>
+        <div id="footer">
+            <script>
+             fetch('./layout/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                });
+            </script>
             </div>
-        </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2024, All Right Reserved <a href="">brm law</a></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </footer>
-
-
 
 
 

@@ -6,35 +6,26 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="./layout/footer.css">
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<nav id="navbar" class="">
-  <div class="nav-wrapper">
-    <!-- Navbar Logo -->
-    <div class="logo">
-      <!-- Logo Placeholder for Inlustration -->
-      <a href=""> <img src="./data/logo.jpg" alt="" class="" ></a>
-      <strong>BRM LAW</strong>
-    </div>
+<nav>
     
-    <!-- Navbar Links -->
-    <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">About Us</a></li>
-      <li><a href="#Team">Team</a></li>
-      <li><a href="practices.html">Practices</a></li>
-      <li><a href="./contact.html">Contact Us</a></li>
-    </ul>
-  </div>
+        <div id="navbar">
+            <script>
+             fetch("./layout/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                });
+            </script>
+        </div>
+    
+    
 </nav>
-    </header>
-
 
 
 
@@ -86,6 +77,14 @@
     <!-- Footer -->
     
     <!------------------- Footer -->
-    
+    <div id="footer">
+    <script>
+     fetch('./layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+    </div>
 </body>
 </html>
