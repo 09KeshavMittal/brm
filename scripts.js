@@ -122,7 +122,6 @@ const flashCardApp = new Vue({
 
 
 
-
 // contct us
 const form = document.getElementById('contact-form');
 
