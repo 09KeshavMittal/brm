@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MATRIMONIAL</title>
     
-    <link rel="stylesheet" href="../layout/navbar.css">
-    <link rel="stylesheet" href="practice_area.css">
-    <link rel="stylesheet" href="../layout/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/practice_area.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="../scripts.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -16,7 +16,7 @@
     <nav>
         <div id="navbar">
             <script>
-             fetch("../layout/navbar.html") 
+             fetch("./navbar.html") 
                 .then(response => response.text())
                 .then(data => {
                 document.getElementById('navbar').innerHTML = data;
@@ -25,12 +25,12 @@
         </div>
     </nav>
         
-    <div class="container">
+    <div class="container-practice">
         <div class="image-top">
             <img src="https://plus.unsplash.com/premium_photo-1661769577787-9811af17f98d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGF3fGVufDB8fDB8fHww" alt="" class="image-top">
         </div>
         <div class="content">
-            <h1 class="heading">REAL ESTATE</h1>
+            <h1 class="heading text-center">REAL ESTATE</h1>
             <p class="paragraph">
                 Property development is a prominent market and one of the largest employers in the nation. In recent years, the enactment of the Real Estate (Regulation and
 Development) Act, 2016, as amended from time to time, has changed the way in which builders and developers had been functioning over the years, by
@@ -52,7 +52,7 @@ developers and buyers before the Real Estate Regulatory Authority in various pro
     <!------------------- Footer -->
     <div id="footer">
     <script>
-     fetch('../layout/footer.html')
+     fetch('./footer.html')
         .then(response => response.text())
         .then(data => {
         document.getElementById('footer').innerHTML = data;

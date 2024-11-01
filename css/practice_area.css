@@ -4,7 +4,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
+.text-center{
+    text-align: center;
+    
+}
 .image-top {
     width: 100%;
     position: relative;
@@ -17,13 +20,12 @@ body {
     height: 100%;
 }
 
-.container {
-    
-    /* margin: 40px auto; */
-    /* padding: 20px; */
-    /* background-color: #f9f9f9; */
-    /* border: 1px solid #ddd; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+.container-practice {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .content {

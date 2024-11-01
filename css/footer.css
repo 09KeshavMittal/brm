@@ -106,3 +106,43 @@ ul {
 .footer-menu a:hover {
   color: #ffd700;
 }
+
+
+@media (max-width: 576px) {
+  .footer-widget:nth-child(3) {
+    display: none;
+  }
+  /* .footer-section {
+    padding: 30px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-widget-heading h3 {
+    font-size: 14px;
+  }
+
+  .single-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .single-cta i {
+    margin: 0 0 10px 0;
+  }
+
+  .cta-text h4 {
+    font-size: 13px;
+  }
+
+  .cta-text span {
+    font-size: 12px;
+  }
+
+  .copyright-text p {
+    font-size: 12px;
+  } */
+}

@@ -1,5 +1,5 @@
 /* Global Styles */
-body, h1, h2, h3, p, input, textarea, label {
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,52 +12,19 @@ body, h1, h2, h3, p, input, textarea, label {
     margin: 0 auto;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Navbar */
-header nav {
-    background-color: #fff;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar-menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar-menu li {
-    padding: 0 20px;
-}
-
-.navbar-menu li a:hover {
-    color: #555;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 50px;
-    margin-right: 10px;
-}
-
 /* Contact Us Section */
 .contact-us-section {
-    padding: 150px 50px;
+    padding: 100px 20px;
     background-color: #f9f9f9;
+    margin-top: 10vh;
 }
 
 .contact-row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .contact-info {
@@ -71,6 +38,13 @@ header nav {
 
 .contact-info p {
     margin-bottom: 10px;
+}
+
+.contact-info iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
 }
 
 .contact-form {
@@ -111,6 +85,62 @@ header nav {
 .contact-form button:hover {
     background-color: #555;
 }
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+    h3{
+        text-align: center;
+    }
+    .contact-us-section {
+        padding: 80px 15px;
+    }
+
+    .contact-info h1, .contact-form h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-us-section {
+        padding: 60px 10px;
+    }
+
+    .contact-info h1, .contact-form h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+
+    .contact-info iframe {
+        height: 250px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+    }
+
+    .contact-form button {
+        padding: 10px;
+    }
+
+    .contact-info h1, .contact-form h1 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
+
 
 /* Footer
 footer {

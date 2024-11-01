@@ -1,0 +1,116 @@
+/* Profile Container */
+.profile-container {
+    max-width: 95%; /* Maximum width for the profile container */
+    margin: 20px auto; /* Center align the container */
+    padding: 20px; /* Padding around the container */
+    border: 1px solid #ccc; /* Light border for the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for the entire profile */
+}
+
+/* Profile Content */
+.profile-content {
+    margin-bottom: 20px; /* Space below the profile content */
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 20px; /* Space below the header */
+    padding: 20px; /* Padding around the header */
+    background-color: #fff; /* White background for the header */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.profile-photo {
+    width: 150px; /* Width of the profile photo */
+    height: 150px; /* Height of the profile photo */
+    border-radius: 50%; /* Circular profile photo */
+    margin-right: 20px; /* Space between photo and text */
+    object-fit: cover; /* Cover the entire area */
+}
+
+.profile-info {
+    flex-grow: 1; /* Allow text to fill the remaining space */
+}
+
+.name {
+    font-size: 28px; /* Size of the name */
+    color: #333; /* Color of the name */
+    margin: 0; /* Remove default margin */
+}
+
+.position {
+    font-size: 20px; /* Size of the position */
+    color: #666; /* Color of the position */
+    margin: 5px 0; /* Space around position */
+}
+
+.expertise {
+    font-size: 16px; /* Size of expertise */
+    color: #888; /* Color of expertise */
+}
+
+/* Description Section */
+.description-section {
+    margin-top: 10px; /* Space above section */
+    padding: 10px; /* Padding inside the section */
+    background-color: #f3f8fc; /* Light background for the description */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.description-section h3 {
+    color: #444; /* Heading color */
+    border-bottom: 2px solid #ffd700; /* Bottom border for section headings */
+    padding-bottom: 5px; /* Padding below the heading */
+}
+
+.description-section p {
+    font-size: 16px; /* Font size for description */
+    color: #555; /* Color for description */
+}
+
+/* Education and Practices Section */
+.education-section, .practices-section {
+    margin-top: 20px; /* Space above sections */
+    padding: 20px; /* Padding inside the sections */
+    background-color: #fff; /* White background for the sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+h3 {
+    color: #444; /* Heading color */
+    border-bottom: 2px solid #ffd700; /* Bottom border for section headings */
+    padding-bottom: 10px; /* Padding below the heading */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+ul li {
+    font-size: 16px; /* Font size for list items */
+    color: #555; /* Color for list items */
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .profile-photo {
+        margin-bottom: 10px; /* Space below the photo */
+    }
+
+    .profile-info {
+        text-align: center; /* Center align text on small screens */
+    }
+}
